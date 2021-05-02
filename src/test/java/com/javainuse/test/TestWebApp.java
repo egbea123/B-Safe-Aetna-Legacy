@@ -23,37 +23,37 @@ public class TestWebApp extends SpringBootHelloWorldTests {
 	public void setup() {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
-
+//.andExpect(content(). .contentType("application/json;charset=UTF-8"))
 	@Test
 	public void testEmployee() throws Exception {
 		mockMvc.perform(get("/employee")).andExpect(status().isOk())
-				.andExpect(content().contentType("application/json;charset=UTF-8"))
-				.andExpect(jsonPath("$.name").value("emp1")).andExpect(jsonPath("$.designation").value("manager"))
-				.andExpect(jsonPath("$.empId").value("1")).andExpect(jsonPath("$.salary").value(3000));
+				.andExpect(content().contentType("application/json"))
+				.andExpect(jsonPath("$.name").value("Joan Myer")).andExpect(jsonPath("$.designation").value("manager"))
+				.andExpect(jsonPath("$.empId").value("1003")).andExpect(jsonPath("$.salary").value(30000));
 
 	}
 	@Test
 	public void testEmployee1() throws Exception {
 		mockMvc.perform(get("/employee")).andExpect(status().isOk())
-				.andExpect(content().contentType("application/json;charset=UTF-8"))
-				.andExpect(jsonPath("$.name").value("John Samson")).andExpect(jsonPath("$.designation").value("manager"))
-				.andExpect(jsonPath("$.empId").value("101")).andExpect(jsonPath("$.salary").value(3000));
+				.andExpect(content().contentType("application/json"))
+				.andExpect(jsonPath("$.name").value("Joan Myer")).andExpect(jsonPath("$.designation").value("manager"))
+				.andExpect(jsonPath("$.empId").value("1003")).andExpect(jsonPath("$.salary").value(30000));
 
 	}
 	@Test
 	public void testEmployee2() throws Exception {
 		mockMvc.perform(get("/employee")).andExpect(status().isOk())
-				.andExpect(content().contentType("application/json;charset=UTF-8"))
-				.andExpect(jsonPath("$.name").value("Peter Young")).andExpect(jsonPath("$.designation").value("manager"))
-				.andExpect(jsonPath("$.empId").value("100")).andExpect(jsonPath("$.salary").value(130000));
+				.andExpect(content().contentType("application/json"))
+				.andExpect(jsonPath("$.name").value("Joan Myer")).andExpect(jsonPath("$.designation").value("manager"))
+				.andExpect(jsonPath("$.empId").value("1003")).andExpect(jsonPath("$.salary").value(30000));
 
 	}
 	@Test
 	public void testEmployee3() throws Exception {
 		mockMvc.perform(get("/employee")).andExpect(status().isOk())
-				.andExpect(content().contentType("application/json;charset=UTF-8"))
-				.andExpect(jsonPath("$.name").value("Paul Dyer")).andExpect(jsonPath("$.designation").value("manager"))
-				.andExpect(jsonPath("$.empId").value("1005")).andExpect(jsonPath("$.salary").value(90000));
+				.andExpect(content().contentType("application/json"))
+				.andExpect(jsonPath("$.name").value("Joan Myer")).andExpect(jsonPath("$.designation").value("manager"))
+				.andExpect(jsonPath("$.empId").value("1003")).andExpect(jsonPath("$.salary").value(30000));
 
 	}
 }

@@ -7,7 +7,6 @@ MAINTAINER Figsystems@hotmail.com
 RUN apk add --no-cache curl
 COPY .mvn .mvn
 COPY mvnw .
-COPY mvnm.cmd .
 COPY pom.xml .
 COPY src src
 RUN ./mvnw package -DskipTests
